@@ -10,7 +10,11 @@ const initialState = {
 export const productsSlice =createSlice({
   name:"products",
   initialState,
-  reducers:{},
+  reducers:{
+    increaseAmount:(state,{payload})=>{},
+    decreaseAmount:(state,{payload})=>{},
+    removeItem:(state,{payload})=>{},
+  },
 })
 
 
