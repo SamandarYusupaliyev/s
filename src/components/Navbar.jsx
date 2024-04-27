@@ -1,9 +1,6 @@
-import { UseSelector, useSelector } from "react-redux"
-// import {FiShoppingCart} from "react-icons/fi"
-import { store } from "../app/store"
+
 
 function Navbar() {
-  const {total} =useSelector((store)=>store.products)
   return (
     <div className="navbar bg-base-100">
     <div className="navbar-start">
