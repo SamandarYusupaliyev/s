@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { combineReducers, createSlice } from '@reduxjs/toolkit'
 import allProducts from "../../data"
 
 const initialState = {
@@ -16,14 +16,18 @@ export const productsSlice =createSlice({
         return product.id == payload;
       });
       item.amount +=1;
+      productsSlice.caseReducers.calulateTotal(state)
     },
     decreaseAmount:(state,{payload})=>{
       const item = state.products.find((product)=>{
         return product.id == payload;
       });
       item.amount -=1;
+      productsSlice.caseReducers.calulateTotal(state)
     },
-    removeItem:(state,{payload})=>{},
+    removeItem:(state,{payload})=>{
+      productsSlice.caseReducers.calulateTotal(state)
+    },
     calulateTotal:(state)=>{
       let price =0;
       let total =0;
@@ -37,5 +41,5 @@ export const productsSlice =createSlice({
   },
 })
 
-
+export const {increaseAmount,decreaseAmount} =productsSlice.actions;
 export default productsSlice.reducer
