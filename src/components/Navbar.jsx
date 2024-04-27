@@ -24,7 +24,7 @@ function Navbar() {
     <div className="navbar-end">
         <div className="indicator">
         <div className="indicator">
-          <span className="indicator-item badge badge-secondary">{total}</span> 
+          <span className="indicator-item bade badge-secondary">{total}</span> 
           <button className="m-1">
           <LuShoppingCart className="h-6 w-6" />
           </button>
