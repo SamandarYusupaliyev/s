@@ -5,7 +5,7 @@ import { LuShoppingCart } from "react-icons/lu";
 function Navbar() {
   const {total} = useSelector ((store)=>store.products);
   return (
-    <div className="navbar bg-base-100 py-4">
+    <div className="navbar bg-base-100 py-4 mb-10">
     <div className="navbar-start">
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle ">
