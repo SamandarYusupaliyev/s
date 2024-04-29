@@ -18,22 +18,26 @@ import { calulateTotal , decreaseAmount , increaseAmount , removeItem } from "..
           <div className="card card-side bg-base-100 shadow-xl">
             <div className="w-60 h-60"><img className="w-full h-full rounded-2xl" src={product.images[0]} alt="Product"/></div>
             <div className="card-body flex flex-col items-center justify-center">
-        <h2 className="card-title">{product.title}</h2>
-        <p>{product.price}$</p>
-        <div className="card-actions">
-          <button onClick={()=> {dispatch(removeItem(product.id))}} className="btn btn-primary">Remove</button>
-        </div>
-            </div>
-            <div className="flex items-center p-20 text-3xl gap-3">
-        <button className="btn" onClick={()=> {dispatch(increaseAmount(product.id))}}>+</button>
+        <h2  className="card-title  text-xl mb-5">{product.title}</h2>
+          <div className="flex items-center text-2xl gap-3 mb-4">
+        <button className="btn text-xl" onClick={()=> {dispatch(increaseAmount(product.id))}}>+</button>
         <span className="btn">{product.amount}</span>
-        <button className="btn" onClick={()=> {
+        <button className="btn text-" onClick={()=> {
           if(product.amount > 1) {
             dispatch(decreaseAmount(product.id))
           } else {
             dispatch(removeItem(product.id))
           }
         }}>-</button>
+            </div>
+        <div className="flex justify-center items-center gap-5 mb-5">
+         <p className="ms-8">{product.price}$</p>
+         <p className="line-through">899 $</p>
+         <button className="bg-purple-950 text-white w-20 rounded">aksiya</button>
+        </div>
+        <div className="card-actions">
+          <button onClick={()=> {dispatch(removeItem(product.id))}} className="btn btn-primary w-40 ">Remove</button>
+        </div>
             </div>
           </div>
           </li>
