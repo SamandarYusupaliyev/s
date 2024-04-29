@@ -1,6 +1,6 @@
 import {  useDispatch, useSelector } from "react-redux"
 
-import { calulateTotal , decreaseAmount , increaseAmount , removeItem } from "../features/products/productSlice"
+import { calulateTotal , decreaseAmount , increaseAmount , removeItem } from "../features/products/productsSlice"
 
 
 

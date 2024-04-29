@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
-import { calulateTotal } from './features/products/productSlice'
+import { calulateTotal } from './features/products/productsSlice'
 import { useDispatch } from 'react-redux'
-import ProductsList from './components/ProductsList'
+import ProductsList from './components/ProducltList'
 
 function App() {
   const dispatch = useDispatch()
